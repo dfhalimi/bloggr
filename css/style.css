@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+header .logo {
+  font-family: "Yellowtail", cursive;
+  color: #f04273;
+  font-size: 2.2em;
+}
+
+header input {
+  border: none;
+  border: 1px solid rgba(27, 27, 27, 0.5);
+  border-radius: 10px;
+  padding: 5px 5px;
+  font-size: 1em;
+}
+
+header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  margin-right: 20px;
+  font-size: 1.1em;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+header ul li:hover {
+  color: #f04273;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  padding-top: 50px;
+}
+
+main .alert {
+  width: 700px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .alert-success {
+  background-color: #6adf3c;
+  color: #34691f;
+}
+
+main .alert-danger {
+  background-color: #df3c57;
+  color: #50181e;
+}
+
+main .post {
+  width: 700px;
+  height: auto;
+  margin: 30px auto 100px auto;
+}
+
+main .post h1 {
+  margin: 0 0 15px 0;
+  line-height: 1.4em;
+}
+
+main .post h2 {
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+main .post .post-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .post .post-info .profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main .post .post-info .profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .post .post-info div p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+main .post .post-info div p a:hover {
+  text-decoration: underline;
+}
+
+main .post .post-info div .author-name {
+  font-weight: bold;
+}
+
+main .post .main-img {
+  width: 100%;
+  height: 400px;
+  margin: 30px 0 70px 0;
+}
+
+main .post .main-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .post p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+main .post .read-more {
+  border-color: #4e4e4e;
+  background-color: #4e4e4e;
+  border-radius: 5px;
+}
+
+main .post .read-more:hover {
+  background-color: transparent;
+  color: #f04273;
+  border-color: #f04273;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.form form input,
+.form form textarea {
+  margin-bottom: 10px;
+  padding: 10px 0 10px 5px;
+}
+
+.form form button {
+  padding: 10px;
+}
+
+.form .error {
+  color: red;
+  font-weight: bold;
+}
+
+.form .success {
+  color: green;
+  font-weight: bold;
+}
+
+.post-btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body .btn {
+  border: 1px solid #f04273;
+  border-radius: 10px;
+  background-color: #f04273;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+body .btn:hover {
+  background-color: transparent;
+  color: #f04273;
+}
+
+body .edit {
+  font-size: 18px;
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  margin-right: 50px;
+  text-align: center;
+  width: 80px;
+}
+
+body .edit:hover {
+  border-color: #4e4e4e;
+  color: #4e4e4e;
+}
+
+body .delete {
+  font-size: 18px;
+  background-color: #df3c57;
+  text-align: center;
+  width: 80px;
+  padding: 7px 10px !important;
+}
+
+body button {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

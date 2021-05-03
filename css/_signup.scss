@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px 0 10px 5px;
+    }
+    button {
+      padding: 10px;
+    }
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+}
