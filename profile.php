@@ -20,11 +20,9 @@
                     <p><strong><?php echo $q['usersEmail']?></strong></p>
                 </div>
                 <div class="post-btns">
-                    <a href="edit.php?id=<?php echo $q['usersUid'];?>" class="btn edit">Edit</a>
-
                     <form method="POST">
                         <input type="text" hidden name="id" value="<?php echo $q['usersId'];?>">
-                        <button class="btn delete" name="delete">Delete</button>
+                        <button class="btn delete" name="delete">Delete Account</button>
                     </form>
                 </div>
             </form>

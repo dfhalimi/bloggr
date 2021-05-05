@@ -11,5 +11,5 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM blog_posts;";
+    $sql = "SELECT * FROM blog_posts ORDER BY id DESC;";
     $query = mysqli_query($conn, $sql);

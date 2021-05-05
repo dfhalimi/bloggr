@@ -85,6 +85,13 @@ main .post h1 {
   line-height: 1.4em;
 }
 
+main .post .posts-overview {
+  text-align: center;
+  font-size: 2rem;
+  color: #4e4e4e;
+  margin-bottom: 40px;
+}
+
 main .post h2 {
   font-weight: normal;
   margin: 0 0 20px 0;
@@ -271,7 +278,7 @@ body .edit {
   border-color: #4e4e4e;
   margin-right: 50px;
   text-align: center;
-  width: 80px;
+  min-width: 80px;
 }
 
 body .edit:hover {
@@ -283,7 +290,7 @@ body .delete {
   font-size: 18px;
   background-color: #df3c57;
   text-align: center;
-  width: 80px;
+  min-width: 80px;
   padding: 7px 10px !important;
 }
 
