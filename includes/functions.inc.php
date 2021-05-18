@@ -72,7 +72,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed");
+        header("Location: ../signup.php?error=stmtfailed");
         exit();
     }
 
@@ -81,6 +81,20 @@ function createUser($conn, $name, $email, $username, $pwd) {
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+
+    // Inserting userid and status into the profileimg db
+    $sql = "SELECT * FROM users WHERE usersUid = '$username';";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $userid = $row['usersId'];
+            $sql = "INSERT INTO profileimg (usersId, status) 
+            VALUES ('$userid', 1);";
+            mysqli_query($conn, $sql);
+            header("Location: index.php"); 
+        }   
+    }
 }
 
 function emptyInputLogin($username, $pwd) {
@@ -116,4 +130,26 @@ function loginUser($conn, $username, $pwd) {
         header("Location: ../index.php");
         exit();
     }
+}
+
+function emptyInputPost($title, $content) {
+    $result;
+    if (empty($title) || empty($content)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyInputComment($content) {
+    $result;
+    if (empty($content)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
 }

@@ -13,7 +13,12 @@ if(isset($_POST["new_post"])) {
 
     $image = $_FILES["image"]['name'];
 
-    $sql = "INSERT INTO blog_posts (title, content, author, publishDate, image) VALUES ('$title',' $content', '$author', '$publishDate', '$image');";
+    if (emptyInputPost($title, $content) !== false) {
+        header("Location: ../create.php?error=emptyinput");
+        exit();
+    }
+
+    $sql = "INSERT INTO blog_posts (title, content, author, publishDate, image) VALUES ('$title','$content', '$author', '$publishDate', '$image');";
     mysqli_query($conn, $sql);
 
     // Now let's move the uploaded image into the folder: images
@@ -27,6 +32,6 @@ if(isset($_POST["new_post"])) {
     }
 }
 else {
-    header("location: ../index.php");
+    header("Location: ../index.php");
     exit();  
 }

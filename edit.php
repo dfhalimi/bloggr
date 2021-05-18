@@ -13,7 +13,7 @@
                 <input type="text" hidden name="id" value="<?php echo $q['id'];?>">
                 <input type="text" name="title" placeholder="Blog Title" 
                 value="<?php echo $q['title'];?>">
-                <textarea name="content"><?php echo $q['content'];?></textarea>
+                <textarea name="content"><?php echo nl2br($q['content']);?></textarea>
                 <button name="update" class="btn edit">Update</button>
             </form>
         </div>

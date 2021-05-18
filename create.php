@@ -13,6 +13,13 @@
           <input type="hidden" name="author" value="<?php echo $_SESSION['uid']?>">
           <button type="submit" name="new_post" class="btn">Add Post</button>
         </form>
+        <?php
+          if (isset($_GET["error"])) {
+            if ($_GET["error"] == "emptyinput") {
+              echo "<p class='error'>Fill in all fields!</p>";
+            }
+          }
+        ?>
       </div>
     <?php
         } else {

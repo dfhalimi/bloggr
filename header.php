@@ -9,14 +9,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
     <title>Bloggr</title>
   </head>
   <body>
     <header>
       <a href="index.php"><h1 class="logo">Bloggr</h1></a>
-      <input type="text" class="search" name="search" placeholder="Search..." />
+      <form action="search.php" method="POST">
+        <input type="text" class="search" name="search" placeholder="Search..." />
+        <button type="submit" name="submit-search">Search</button>
+      </form>
       <nav>
-        <ul>
+        <i class="fas fa-bars" id="menuOpen"></i>
+        <ul id="menu">
+          <li id="menuClose">X</li>
           <?php
             if (isset($_SESSION['uid'])) {
               echo "<li><a href='profile.php?user=".$_SESSION['uid']."'>PROFILE</a></li>";

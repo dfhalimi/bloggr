@@ -1,8 +1,11 @@
 header {
+  position: fixed;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 80px;
+  width: 100%;
   .logo {
     font-family: "Yellowtail", cursive;
     color: $main-color;
@@ -11,20 +14,101 @@ header {
   input {
     border: none;
     border: 1px solid rgba(27, 27, 27, 0.5);
-    border-radius: 10px;
-    padding: 5px 5px;
+    border-radius: 10px 0 0 10px;
+    height: 30px;
+    font-size: 1em;
+    padding-left: 5px;
+  }
+  button {
+    background-color: $main-color;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 70px;
+    border-radius: 0 10px 10px 0;
     font-size: 1em;
   }
-  ul {
-    list-style: none;
+  nav {
     display: flex;
-    li {
-      margin-right: 20px;
-      font-size: 1.1em;
-      transition: 0.15s ease-in-out;
-      &:hover {
-        color: $main-color;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: 1.3em;
+      cursor: pointer;
+      visibility: hidden;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 20px;
+        font-size: 1.1em;
+        transition: 0.15s ease-in-out;
+        &:hover {
+          color: $main-color;
+        }
       }
+      #menuClose {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    justify-content: space-between;
+    padding: 0 10px;
+    nav {
+      i {
+        visibility: visible;
+      }
+      ul {
+        position: absolute;
+        flex-direction: column;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        right: -300px;
+        background-color: $main-color;
+        margin: 0;
+        transition: 0.3s ease-in-out;
+        li {
+          margin-bottom: 10px;
+          margin: 0;
+          padding: 10px 0;
+          color: #ebebeb;
+          &:hover {
+            padding-left: 5px;
+            color: #fff;
+          }
+          .btn {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            color: #ebebeb;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+        #menuClose {
+          visibility: visible;
+          cursor: pointer;
+        }
+      }
+      .open-menu {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0 5px;
+    input {
+      width: 65%;
     }
   }
 }

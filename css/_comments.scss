@@ -1,0 +1,46 @@
+.comments {
+  width: 700px;
+  margin: 50px auto;
+  h2 {
+    text-align: center;
+  }
+  .error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    textarea {
+      height: 100px;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    button {
+      padding: 10px 0 10px 7px;
+      width: 50%;
+      margin: 0 auto;
+      border: none;
+      border-radius: 5px;
+      background-color: $grey-btn;
+      color: white;
+      font-size: 1.2em;
+    }
+  }
+  .comment {
+    margin: 50px 0;
+    p {
+      margin: 5px;
+    }
+    .comment-date {
+      color: grey;
+      font-size: 0.95em;
+    }
+    .comment-content {
+      margin-top: 15px;
+      line-height: 1.5em;
+    }
+  }
+}

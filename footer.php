@@ -1,5 +1,6 @@
 </main>
     <footer></footer>
-    <script src="js/script.js"></script>
+    <!-- Js -->
+    <script src="js/script.js?3"></script>
   </body>
 </html>
